@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textOff="TEXT"
+            android:textOn="IMG"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="배점"
+            app:layout_constraintEnd_toStartOf="@+id/questionScore"
+            app:layout_constraintTop_toBottomOf="@+id/question" />
+
+        <EditText
+            android:id="@+id/questionScore"
+            style="@style/EditTextRound"
+            android:layout_width="128dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="배점"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/question"
+            app:layout_constraintTop_toBottomOf="@+id/question" />
+
+        <EditText
+            android:id="@+id/question"
+            style="@style/EditTextRound"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="문제"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="문제"
+            app:layout_constraintBottom_toTopOf="@+id/question"
+            app:layout_constraintStart_toStartOf="@+id/question" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="onSave"
+            android:text="SAVE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/textQuize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioGroup
+                android:id="@+id/textRadio"
+                android:layout_width="66dp"
+                android:layout_height="317dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <RadioButton
+                    android:id="@+id/textAnswer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/textAnswer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/textAnswer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/textAnswer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/textEx1"
+                style="@style/EditTextRound"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="84dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:hint="보기1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textQuize" />
+
+            <EditText
+                android:id="@+id/textEx2"
+                style="@style/EditTextRound"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:hint="보기2"
+                app:layout_constraintEnd_toEndOf="@+id/textEx1"
+                app:layout_constraintTop_toBottomOf="@+id/textEx1" />
+
+            <EditText
+                android:id="@+id/textEx3"
+                style="@style/EditTextRound"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:hint="보기3"
+                app:layout_constraintEnd_toEndOf="@+id/textEx2"
+                app:layout_constraintTop_toBottomOf="@+id/textEx2" />
+
+            <EditText
+                android:id="@+id/textEx4"
+                style="@style/EditTextRound"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:hint="보기4"
+                app:layout_constraintEnd_toEndOf="@+id/textEx3"
+                app:layout_constraintTop_toBottomOf="@+id/textEx3" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/imgLayout"
+            android:layout_width="240dp"
+            android:layout_height="445dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.578"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="버튼 옆을 클릭하세요."
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/imgRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/imgAnswer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp" />
+
+                <RadioButton
+                    android:id="@+id/imgAnswer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp" />
+
+                <RadioButton
+                    android:id="@+id/imgAnswer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp" />
+
+                <RadioButton
+                    android:id="@+id/imgAnswer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imgEx1"
+                android:layout_width="157dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/imgRadio"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imgEx2"
+                android:layout_width="158dp"
+                android:layout_height="93dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/imgEx1"
+                app:layout_constraintTop_toBottomOf="@+id/imgEx1"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imgEx3"
+                android:layout_width="158dp"
+                android:layout_height="87dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/imgEx2"
+                app:layout_constraintTop_toBottomOf="@+id/imgEx2"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imgEx4"
+                android:layout_width="158dp"
+                android:layout_height="91dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/imgEx3"
+                app:layout_constraintTop_toBottomOf="@+id/imgEx3"
+                tools:srcCompat="@tools:sample/avatars" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="DELETE"
+            app:layout_constraintEnd_toStartOf="@+id/toggleButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
